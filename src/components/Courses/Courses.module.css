@@ -1,0 +1,15 @@
+.education_place {
+  color: #6d9bf5;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 12px 0 12px 0;
+}
+
+.education_speciality {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}

@@ -1,0 +1,33 @@
+.project_item {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-right: 8px;
+}
+
+.project_container {
+  margin-bottom: 48px;
+}
+
+.project_list {
+  padding: 0 0 0 18px;
+  margin: 0;
+}
+
+.project_item_descr {
+  color: #595959;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+}
+.project_item_link {
+  color: #005fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
