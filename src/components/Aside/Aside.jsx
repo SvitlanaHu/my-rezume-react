@@ -1,6 +1,9 @@
 import styles from "./Aside.module.css";
 import { Contacts } from "../Contacts/Contacts";
 import myPhoto from "../../assets/photo_me.png";
+import { TechSkills } from "../TechSkills/TechSkills";
+import { SoftSkills } from "../SoftSkills/SoftSkills";
+import { Languages } from "../Languages/Languages";
 
 export const Aside = () => {
   return (
@@ -12,6 +15,9 @@ export const Aside = () => {
         width={370}
       />
       <Contacts />
+      <TechSkills />
+      <SoftSkills />
+      <Languages />
     </aside>
   );
 };

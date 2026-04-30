@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./WorkExperience.module.css";
 
 const workExperience = [
@@ -55,12 +56,19 @@ const workExperience = [
   },
 ];
 
+const VISIBLE_COUNT = 2;
+
 export const WorkExperience = () => {
+  const [showAll, setShowAll] = useState(false);
+  const total = workExperience.length;
+  const reversed = [...workExperience].reverse();
+  const visible = showAll ? reversed : reversed.slice(0, VISIBLE_COUNT);
+
   return (
     <section className={styles.work_experience_container}>
       <h2 className={styles.main_content_title}>Work Experience</h2>
-      {workExperience.map(
-        ({ position, company, period, duties, achievements }) => (
+      <div className={styles.work_list}>
+        {visible.map(({ position, company, period, duties, achievements }) => (
           <div key={position} className={styles.work_experience_place}>
             <h3 className={styles.work_experience_position}>{position}</h3>
             <p className={styles.work_experience_company}>{company}</p>
@@ -85,7 +93,15 @@ export const WorkExperience = () => {
               </>
             )}
           </div>
-        )
+        ))}
+      </div>
+      {total > VISIBLE_COUNT && (
+        <button
+          className={styles.toggle_btn}
+          onClick={() => setShowAll((prev) => !prev)}
+        >
+          {showAll ? "Show less ↑" : `Show more (${total - VISIBLE_COUNT}) ↓`}
+        </button>
       )}
     </section>
   );
