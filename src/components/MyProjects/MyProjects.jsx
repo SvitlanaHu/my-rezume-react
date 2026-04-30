@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Users, User } from "lucide-react";
 import styles from "./MyProjects.module.css";
 
 const projects = [
@@ -94,7 +95,15 @@ export const MyProjects = () => {
                       : styles.badge_solo
                   }`}
                 >
-                  {project.type === "team" ? "Team" : "Solo"}
+                  {project.type === "team" ? (
+                    <>
+                      <Users size={11} strokeWidth={2} /> Team
+                    </>
+                  ) : (
+                    <>
+                      <User size={11} strokeWidth={2} /> Solo
+                    </>
+                  )}
                 </span>
                 <a
                   className={styles.project_item_github}
