@@ -11,6 +11,7 @@
   background-color: var(--color-bg-secondary);
   border-bottom: 1px solid var(--color-border);
   padding-top: 1rem;
+  box-shadow: var(--shadow-hover);
 }
 
 .about_me_container::before {
