@@ -1,8 +1,16 @@
-.about_me_container {
+/*.about_me_container {
   position: relative;
   padding-bottom: 2.5rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid var(--color-border);
+}*/
+.about_me_container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-top: 1rem;
 }
 
 .about_me_container::before {
