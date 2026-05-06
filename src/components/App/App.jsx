@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MainContent } from "../MainContent/MainContent.jsx";
 import { Aside } from "../Aside/Aside.jsx";
+import { ScrollToTop } from "../ScrollToTop/ScrollToTop.jsx";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -28,6 +29,7 @@ const App = () => {
         <MainContent />
       </main>
       <Aside />
+      <ScrollToTop />
     </>
   );
 };
